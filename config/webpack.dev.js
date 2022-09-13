@@ -7,9 +7,7 @@ const devConfig = {
   mode: 'development',
   devServer: {
     port: 8083,
-    historyApiFallback: {
-      index: 'index.html'
-    }
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWelpackPlugin({
@@ -17,7 +15,8 @@ const devConfig = {
     })  
   ],
   entry: {
-    review: './src/index.js'
+    review: './src/index.js',
+    reviewWithContainer: './src/indexWithContainer.js'
   },
   output: {
     filename: '[name].bundle.js',
